@@ -1,0 +1,63 @@
+<h2>Which playground layout feels right?</h2>
+<p class="subtitle">Both compare prompt A and prompt B on the same input, then an AI judge scores them. Click the one closer to what you picture.</p>
+
+<div class="cards">
+  <div class="card" data-choice="side-by-side" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div class="mockup">
+        <div class="mockup-header">A: Side by side</div>
+        <div class="mockup-body">
+          <div style="display:flex;gap:6px;margin-bottom:6px">
+            <input class="mock-input" placeholder="API key (Anthropic / OpenAI)" style="flex:2">
+            <input class="mock-input" placeholder="Model ▾" style="flex:1">
+          </div>
+          <input class="mock-input" placeholder="Test input (shared)" style="width:100%;margin-bottom:6px">
+          <div style="display:flex;gap:6px">
+            <div style="flex:1">
+              <div class="placeholder" style="height:60px">Prompt A</div>
+              <div class="placeholder" style="height:60px;margin-top:4px">Output A</div>
+              <div class="label" style="margin-top:4px">Score: 8/10</div>
+            </div>
+            <div style="flex:1">
+              <div class="placeholder" style="height:60px">Prompt B</div>
+              <div class="placeholder" style="height:60px;margin-top:4px">Output B</div>
+              <div class="label" style="margin-top:4px">Score: 6/10</div>
+            </div>
+          </div>
+          <div class="placeholder" style="margin-top:6px">Judge verdict: A wins, because…</div>
+          <button class="mock-button" style="margin-top:6px">Run both</button>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>Side by side</h3>
+      <p>Two columns, one run. Easy to compare at a glance.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="test-cases" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div class="mockup">
+        <div class="mockup-header">B: Prompts + test-case table</div>
+        <div class="mockup-body">
+          <div style="display:flex;gap:6px;margin-bottom:6px">
+            <div class="placeholder" style="flex:1;height:50px">Prompt A</div>
+            <div class="placeholder" style="flex:1;height:50px">Prompt B</div>
+          </div>
+          <table style="width:100%;font-size:12px;border-collapse:collapse">
+            <tr><th align="left">Test input</th><th>A</th><th>B</th><th>Winner</th></tr>
+            <tr><td>"Summarize this email…"</td><td>8</td><td>6</td><td>A</td></tr>
+            <tr><td>"Translate…"</td><td>7</td><td>9</td><td>B</td></tr>
+            <tr><td>"Explain…"</td><td>8</td><td>7</td><td>A</td></tr>
+            <tr><td colspan="4"><b>Overall: A wins 2–1, avg 7.7 vs 7.3</b></td></tr>
+          </table>
+          <button class="mock-button" style="margin-top:6px">Run all</button>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>Several test inputs</h3>
+      <p>Run both prompts on many inputs; click a row to see outputs and the judge's reasoning. A fairer verdict, more API calls.</p>
+    </div>
+  </div>
+</div>

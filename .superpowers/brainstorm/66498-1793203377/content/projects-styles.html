@@ -1,0 +1,65 @@
+<h2>Three styles for the Projects page</h2>
+<p class="subtitle">Same two projects, same narrow column. Click the one you like.</p>
+
+<div class="cards">
+  <div class="card" data-choice="list" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#fff;color:#27272a;font-family:system-ui,sans-serif;padding:20px;text-align:left">
+      <div style="font-size:22px;font-weight:700;margin-bottom:12px">Projects</div>
+      <div style="padding:12px 0;border-bottom:1px solid #e4e4e7">
+        <div style="font-weight:500">Pixel Palette</div>
+        <div style="color:#52525b;font-size:14px">Pulls a color palette out of any image and exports it as CSS variables.</div>
+        <div style="font-size:12px;margin-top:6px;color:#71717a">#Vue #Canvas API · <u>GitHub</u> · <u>Demo</u></div>
+      </div>
+      <div style="padding:12px 0">
+        <div style="font-weight:500">Terminal Notes</div>
+        <div style="color:#52525b;font-size:14px">A minimal command-line notebook for jotting down ideas.</div>
+        <div style="font-size:12px;margin-top:6px;color:#71717a">#Node.js #CLI · <u>GitHub</u></div>
+      </div>
+    </div>
+    <div class="card-body"><h3>A · Simple list</h3><p>What's built now. Quiet, matches the blog list exactly.</p></div>
+  </div>
+
+  <div class="card" data-choice="cards" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#fff;color:#27272a;font-family:system-ui,sans-serif;padding:20px;text-align:left">
+      <div style="font-size:22px;font-weight:700;margin-bottom:12px">Projects</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+        <div style="border:1px solid #e4e4e7;border-radius:10px;padding:12px">
+          <div style="font-weight:600">Pixel Palette</div>
+          <div style="color:#52525b;font-size:13px;margin:4px 0 8px">Color palettes from any image, as CSS variables.</div>
+          <div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:8px"><span style="font-size:11px;background:#f4f4f5;border-radius:99px;padding:2px 8px">Vue</span><span style="font-size:11px;background:#f4f4f5;border-radius:99px;padding:2px 8px">Canvas API</span></div>
+          <div style="font-size:12px"><u>GitHub</u> · <u>Demo</u></div>
+        </div>
+        <div style="border:1px solid #e4e4e7;border-radius:10px;padding:12px">
+          <div style="font-weight:600">Terminal Notes</div>
+          <div style="color:#52525b;font-size:13px;margin:4px 0 8px">A minimal command-line notebook.</div>
+          <div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:8px"><span style="font-size:11px;background:#f4f4f5;border-radius:99px;padding:2px 8px">Node.js</span><span style="font-size:11px;background:#f4f4f5;border-radius:99px;padding:2px 8px">CLI</span></div>
+          <div style="font-size:12px"><u>GitHub</u></div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body"><h3>B · Card grid</h3><p>Bordered cards, two per row, tags as pills. More "portfolio", stacks to one column on phones.</p></div>
+  </div>
+
+  <div class="card" data-choice="showcase" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#fff;color:#27272a;font-family:system-ui,sans-serif;padding:20px;text-align:left">
+      <div style="font-size:22px;font-weight:700;margin-bottom:12px">Projects</div>
+      <div style="display:flex;gap:12px;margin-bottom:14px">
+        <div style="width:72px;height:56px;border-radius:8px;background:linear-gradient(135deg,#f472b6,#facc15,#38bdf8);flex-shrink:0"></div>
+        <div>
+          <div style="font-weight:600">Pixel Palette <span style="font-size:12px;font-weight:400"><u>GitHub</u> · <u>Demo</u></span></div>
+          <div style="color:#52525b;font-size:13px">Pulls a color palette out of any image and exports it as CSS variables.</div>
+          <div style="font-size:11px;color:#71717a;margin-top:4px">Vue · Canvas API</div>
+        </div>
+      </div>
+      <div style="display:flex;gap:12px">
+        <div style="width:72px;height:56px;border-radius:8px;background:#18181b;color:#4ade80;font:11px monospace;padding:6px;flex-shrink:0">$ notes<br>_</div>
+        <div>
+          <div style="font-weight:600">Terminal Notes <span style="font-size:12px;font-weight:400"><u>GitHub</u></span></div>
+          <div style="color:#52525b;font-size:13px">A minimal command-line notebook for jotting down ideas.</div>
+          <div style="font-size:11px;color:#71717a;margin-top:4px">Node.js · CLI</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body"><h3>C · Showcase with thumbnails</h3><p>A small image beside each project. Most visual, but every project then needs an image (currently out of scope).</p></div>
+  </div>
+</div>
